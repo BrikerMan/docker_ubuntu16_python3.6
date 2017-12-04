@@ -1,10 +1,12 @@
-# Version: 1.0
+# Version: 3.0
 # Name: Python3.6
 
 FROM ubuntu:16.04
 MAINTAINER BrikerMan "https://github.com/BrikerMan/"
 
 USER root
+
+ENV LANG en_US.UTF-8
 
 RUN rm -rf /etc/apt/sources.list
 RUN echo "deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial main restricted \ndeb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates main restricted \ndeb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial universe \ndeb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates universe \ndeb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial multiverse \ndeb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates multiverse \ndeb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse \ndeb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security main restricted \ndeb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security universe \ndeb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security multiverse" >> /etc/apt/sources.list
