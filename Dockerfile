@@ -1,4 +1,4 @@
-# Version: 4.0
+# Version: 5.0
 # Name: Python3.6
 
 FROM ubuntu:16.04
@@ -18,10 +18,9 @@ RUN apt-get install -y build-essential python3.6 python3.6-dev python3-pip pytho
 
 # Install necessary tools
 RUN apt-get install -y git
-RUN apt-get install -y nano
 RUN apt-get install -y language-pack-en-base
 RUN apt-get install -y locales
-RUN apt-get install -y nano wget dialog net-tools
+RUN apt-get install -y nano wget dialog net-tools iputils-ping
 RUN apt-get install -y pandoc
 RUN apt install tzdata
 
