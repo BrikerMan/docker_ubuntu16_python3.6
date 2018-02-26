@@ -30,3 +30,15 @@ RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 1
 RUN update-alternatives --install /usr/bin/python python /usr/bin/python3.6 1
 RUN pip install --upgrade pip
 RUN DEBIAN_FRONTEND="noninteractive" apt-get install -y libpcre3 libpcre3-dev
+
+RUN apt-get install -y language-pack-en-base
+RUN apt-get install -y locales
+# Install necessary tools
+RUN apt-get install -y nano wget dialog net-tools
+RUN apt install tzdata
+
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US.UTF-8
+ENV LC_ALL en_US.UTF-8
+
+RUN ln -fs /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && dpkg-reconfigure -f noninteractive tzdata
